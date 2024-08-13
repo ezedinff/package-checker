@@ -68,6 +68,6 @@ jobs:
         with:
           app-name: 'ezpackagechecker'
           slot-name: 'Production'
-          package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/dist/src/functions
+          package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/dist/src
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E2EB35C86BDF4DEEA95C263B1B3AF76F }}
 
