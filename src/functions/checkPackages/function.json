@@ -7,5 +7,5 @@
       "schedule": "0 0 * * * *"
     }
   ],
-  "scriptFile": "../dist/src/checkPackages/index.js"
+  "scriptFile": "../dist/src/functions//checkPackages/index.js"
 }
