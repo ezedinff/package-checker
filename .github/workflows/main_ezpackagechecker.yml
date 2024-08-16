@@ -62,6 +62,10 @@ jobs:
       - name: Unzip artifact for deployment
         run: unzip release.zip
       
+      - name: List deployment package contents
+        run: |
+          ls -R ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/dist/src
+      
       - name: 'Run Azure Functions Action'
         uses: Azure/functions-action@v1
         id: fa
@@ -70,4 +74,6 @@ jobs:
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/dist/src
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E2EB35C86BDF4DEEA95C263B1B3AF76F }}
+          respect-funcignore: true
+          scm-do-build-during-deployment: true
 
