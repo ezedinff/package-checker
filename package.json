@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && mkdir -p ./dist/src/functions && cp host.json ./dist/src/ && cp ./src/functions/**/function.json ./dist/src/functions/",
+    "build": "tsc && mkdir -p ./dist/src/functions && cp host.json ./dist/src/ && cp ./src/functions/ ./dist/src/functions/",
     "watch": "tsc -w",
     "prestart": "npm run build",
     "start": "func start",
