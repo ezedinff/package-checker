@@ -55,5 +55,5 @@ jobs:
         with:
           app-name: 'ezpackagechecker'  # Replace with your Function App name
           slot-name: 'Production'
-          package: 'dist/src/functions'
+          package: 'release.zip'  # Ensure this points to the correct ZIP file
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E2EB35C86BDF4DEEA95C263B1B3AF76F }}
